@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+
+        <% if(login.length!=0){%>
+          <% include ./partials/headerLogin.ejs %>
+          <% include ./partials/logout.ejs %>
+      <% }
+      else{%>
+        <% include ./partials/header.ejs %>
+        <% include ./partials/user-navigation.ejs %>
+      <% }%>
+       <% include partials/site-navigation.ejs %>
+    <div class="absolute">
+      <main>
+        <section>
+          <article>
+    					<h2 class="welcome">Your Books!!</h2><br><br>
+<h2 style="color:red;"><%= alert %></h2>
+    						<table class="hoverTable">
+      				 			<thead>
+            						<tr>
+                						<th scope="col">Book Name</th>
+                						<th scope="col">Category</th>
+                						<th scope="col">Rating</th>
+                						<th scope="col">Made it</th>
+            						</tr>
+        						</thead>
+
+                    <% if(myBooks.length==0){
+                      %>
+                  <p>No Items to display</p>
+                    <% }
+
+                    else {
+
+                       for (var i=0;i< myBooks.length;i++)
+                    {%>
+
+
+            						<tr>
+
+                						<th scope="row" id="backgroundclips"><a  href="/categories/viewCatalog/<%= myBooks[i].itemCode%>"><%= myBooks[i].itemName %></th>
+                						<td id="backgroundclips5"><%= myBooks[i].catalogCategory %></td>
+                						<td><div class="booksize">
+                              <%  for(var j=0;j<myBooks[i].rating;j++){ %>
+                                   <span class="fa fa-star checked"></span>
+                        <%      }       %>
+                        <%  for(var j=myBooks[i].rating;j<5;j++){ %>
+                             <span class="fa fa-star" style="color:white;"></span>
+                        <%      }       %>
+										</div></td>
+                            <td><%= myBooks[i].madeIt %></td>
+               							<td>
+    										<input class="check" type="checkbox" checked />
+                							<a class="ac-ln-button" href="/myItems?action=update&theItem=<%= myBooks[i].itemCode%>">
+    												Update
+    											<span class="ac-ln-action-product"></span>
+    										</a>
+    										<a class="ac-ln-buttons" href="/myItems?action=delete&theItem=<%= myBooks[i].itemCode%>">
+    												Delete
+    											<span class="ac-ln-action-product"></span>
+    										</a>
+    									</td>
+            						</tr>
+                        <%}
+                      }%>
+
+    						</table>
+
+    						<h4 class="click smallspa"><a class="oness">Tada!! Here are Your Books</h4><br>
+                  <a class="ac-ln-button" href="/categories">
+                  Continue to Browsing
+                <span class="ac-ln-action-product"></span></a>
+
+    					</article>
+
+        </section>
+        <h1 style="font-size: 30px; color: black;">Page </h1>
+        <h1 style="font-size: 40px; color:black;">Page </h1>
+      </main>
+    </div>
+
+
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+</body>
+</html>

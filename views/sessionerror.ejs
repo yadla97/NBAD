@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+    <% if(login.length!=0){%>
+      <% include ./partials/headerLogin.ejs %>
+      <% include ./partials/logout.ejs %>
+  <% }
+  else{%>
+    <% include ./partials/header.ejs %>
+    <% include ./partials/user-navigation.ejs %>
+  <% }%>
+   <% include partials/site-navigation.ejs %>
+
+    <div class="absolute">
+      <main>
+        <section>
+          <ul class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li></li>
+          </ul>
+          <br>
+
+
+        <div style="float:left ">
+      <img src="../assets/images/cry.png" alt="cry" width="300" height="450">
+        </div>
+
+        <div style="width: 50%; float:left; margin-left: 10%;">
+    <h1 style="font-size: 60px; color: white;">Awww...Don't Cry.</h1>
+    <h1 style="font-size: 40px; color: white;">Page not found.</h1>
+    <h1 style="font-size: 30px; color: white;">Please go to correct URL.</h1>
+    <h1 style="font-size: 25px; color: white;"> and then continue with your works!!</h1>
+        </div>
+
+
+
+
+        </section>
+      </main>
+    </div>
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+
+
+</body>
+</html>

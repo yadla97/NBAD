@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+<%var flag=0;%>
+        <% if(login.length!=0){%>
+          <% include ./partials/headerLogin.ejs %>
+          <% include ./partials/logout.ejs %>
+      <% }
+      else{%>
+        <% include ./partials/header.ejs %>
+        <% include ./partials/user-navigation.ejs %>
+      <% }%>
+       <% include partials/site-navigation.ejs %>
+
+<% var flag=0;%>
+    <div class="absolute">
+      <main>
+        <section>
+          <ul class="breadcrumb">
+            <li><a href="/">Home</a></li>
+  						<li><a href="/profile">Feedback</a></li>
+          </ul>
+
+          <div class="bookimage">
+          						<img src="<%=myBooks[0].imageURL%>" alt="Cheaters" width="130" height="190">
+          					</div>
+          					<div class="booktitle">
+              					<div class="booktext"><%=myBooks[0].itemName%></div>
+              					<div class="bookcategory"><i><%=myBooks[0].catalogCategory%></i></div>
+          					</div>
+          					<br><br>
+                    <div id="backgroundclips8">
+          						<h3><%=myBooks[0].description%></h3>
+          					</div><br>
+                    <%if(myBooks != null){%>
+<%for(let i=0; i < myBooks.length; i++){ %>
+<%if(myBooks[i].itemCode == myBooks[0].itemCode){%>
+<% flag=1;%>
+  <div class="selects">
+<i>Rating:</i>
+<form method="POST" action="/action?action=feedback&theItem=<%= myBooks[0].itemCode%>">
+<select class="select-style" name="rating">
+<option value="1" <% if (myBooks[i].rating == 1){ %>selected ='selected'<% } %>> 1</option>
+<option value="2" <% if (myBooks[i].rating == 2){ %>selected ='selected'<% } %>> 2</option>
+<option value="3" <% if (myBooks[i].rating == 3){ %>selected ='selected'<% } %>> 3</option>
+<option value="4" <% if (myBooks[i].rating == 4){ %>selected ='selected'<% } %>> 4</option>
+<option value="5" <% if (myBooks[i].rating == 5){ %>selected ='selected'<% } %>> 5</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" value="Rate it">
+</form>
+</div>
+<div class="selectsy">
+<form method="POST" action="/action?action=feedback&theItem=<%= myBooks[0].itemCode%>">
+<input type="radio" name="madeIt" value="YES" <% if (myBooks[i].madeIt == 'YES'){ %>checked='checked' <%}%> > YES
+<input type="radio" name="madeIt" value="NO" <% if (myBooks[i].madeIt == 'NO'){ %>checked='checked' <%}%> > NO
+<input type="submit" value="Made It">
+</form>
+<!-- <a class="ac-ln-button" href="/mymyBooks">
+  Update Made it
+<span class="ac-ln-action-product"></span></a> -->
+</div><br><br>
+<%}%>
+<%}%>
+<%}%>
+
+<%if(flag==0 || myBooks==''){%>
+                    <div class="selects">
+                   <i>Rating:</i>
+                     <form method="POST" action="/action?action=feedback&theItem=<%= myBooks[0].itemCode%>">
+                   <select class="select-style" name="rating">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                           </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                           <input type="submit" value="Rate it">
+                         </form>
+                </div>
+                <div class="selectsy">
+                  <form method="POST" action="/action?action=feedback&theItem=<%= myBooks[0].itemCode%>">
+                  <label for="yes">YES</label>
+                  <input type="radio" name="madeIt"  value="YES">
+                  <label for="no">NO</label>
+                  <input type="radio"   name="madeIt"  value="NO">&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="submit" value="Made It">
+                </form>
+                  <!-- <a class="ac-ln-button" href="/mymyBooks">
+                    Update Made it
+                  <span class="ac-ln-action-product"></span></a> -->
+            </div><br><br>
+            <%}%>
+            <a class="ac-ln-button" href="/categories">
+              Continue to Browsing
+            <span class="ac-ln-action-product"></span></a>
+
+        </section>
+      </main>
+    </div>
+
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+
+</body>
+</html>

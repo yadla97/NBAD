@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+    <% if(login.length!=0){%>
+      <% include ./partials/headerLogin.ejs %>
+      <% include ./partials/logout.ejs %>
+  <% }
+  else{%>
+    <% include ./partials/header.ejs %>
+    <% include ./partials/user-navigation.ejs %>
+  <% }%>
+   <% include partials/site-navigation.ejs %>
+
+    <div class="absolute">
+      <main>
+        <section>
+          <ul class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li><a href="/categories">Categories</a></li>
+              <li><a href="/store">Store</a></li>
+              <li></li>
+          </ul>
+          <br>
+
+
+          <section>
+      <div class="list">
+      			<div class="product">
+      				<img alt="shoes1" src="../assets/images/hth.jpg" height="300" width="200">
+      				<div><h3>Half Torn Hearts</h3>
+                <h4 class="price">$6<sup>.00</sup></h4>
+                <h6 class="descr">Half Torn Hearts is a coming-of-age tale of three layered individuals with their first loss.</h6>
+      				<br>
+      				<a href="#"><h2>Add to cart</h2></a></div>
+      			</div>
+            <div class="product">
+      				<img alt="shoes1" src="../assets/images/fl.jpg" height="300" width="200">
+      				<div><h3>Forever is Lie</h3>
+                <h4 class="price">$3<sup>.00</sup></h4>
+                <h6 class="descr">The best thing happened to her . . . but in the worst way possible . . </h6>
+      				<br>
+      				<a href="#"><h2>Add to cart</h2></a></div>
+      			</div>
+            <div class="product">
+      				<img alt="shoes1" src="../assets/images/ft.jpg" height="300" width="200">
+      				<div><h3>Forever is True </h3>
+                <h4 class="price">$9<sup>.00</sup></h4>
+                <h6 class="descr">Six months have passed since Prisha was pushed to death .. </h6>
+      				<br>
+      				<a href="#"><h2>Add to cart</h2></a></div>
+      			</div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/alc.jpg" height="300" width="200">
+              <div><h3>The Alchemist </h3>
+                <h4 class="price">$16<sup>.00</sup></h4>
+                <h6 class="descr">Paulo Coelho's masterpiece tells the mystical story of Santiago. </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/sita.jpg" height="300" width="200">
+              <div><h3>SITA </h3>
+                <h4 class="price">$2<sup>.00</sup></h4>
+                <h6 class="descr">India, 3400 BCE. The ancient kingdom of Mithila is divided by corruption.. </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/ram.jpeg" height="300" width="200">
+              <div><h3>RAM </h3>
+                <h4 class="price">$4<sup>.50</sup></h4>
+                <h6 class="descr">3400 BCE. INDIA Ayodhya is weakened by divisions. A terrible war has taken.. </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/rav.jpg" height="300" width="200">
+              <div><h3>Raavan </h3>
+                <h4 class="price">$4<sup>.24</sup></h4>
+                <h6 class="descr">The mighty Lord of Lanka, Raavan, sets out to avenge the insult of his sister </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/atbf.jpg" height="300" width="200">
+              <div><h3>A thing beyond forever </h3>
+                <h4 class="price">$2<sup>.24</sup></h4>
+                <h6 class="descr">Forever is a pristine love story which digs deep into human emotions </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/hp.jpg" height="300" width="200">
+              <div><h3>Harry Potter </h3>
+                <h4 class="price">$10<sup>.50</sup></h4>
+                <h6 class="descr">The Dursleys were so mean that hideous that summer that all Harry Potter  </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/gm.jpg" height="300" width="200">
+              <div><h3>Fire and Blood </h3>
+                <h4 class="price">$24<sup>.00</sup></h4>
+                <h6 class="descr">Centuries before the events of A Game of Thrones, House Targaryen </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/af.jpg" height="300" width="200">
+              <div><h3>Animal Farm </h3>
+                <h4 class="price">$11<sup>.72</sup></h4>
+                <h6 class="descr">As ferociously fresh as it was more than a half century ago </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/got.jpg" height="300" width="200">
+              <div><h3>Game of Thrones </h3>
+                <h4 class="price">$40<sup>.24</sup></h4>
+                <h6 class="descr">Winter is coming. Such is the stern motto of House Stark,  </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/two.jpeg" height="300" width="200">
+              <div><h3>Two by Two</h3>
+                <h4 class="price">$8<sup>.24</sup></h4>
+                <h6 class="descr"> At thirty-two, Russell Green has it all - A stunning wife, </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/ll.jpeg" height="300" width="200">
+              <div><h3>Like a Love Song </h3>
+                <h4 class="price">$1<sup>.24</sup></h4>
+                <h6 class="descr">Emotionally charged and vivid, Like a Love Song is about </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/life.jpeg" height="300" width="200">
+              <div><h3>Life is what you make it </h3>
+                <h4 class="price">$4<sup>.24</sup></h4>
+                <h6 class="descr"> A book of love, hope, and how determination can overcome even your destiny </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/gitl.jpeg" height="300" width="200">
+              <div><h3>Girl of my dreams </h3>
+                <h4 class="price">$8<sup>.24</sup></h4>
+                <h6 class="descr">Every day, Daman wakes up from the same nightmare </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/mm.jpg" height="300" width="200">
+              <div><h3>Marry me stranger </h3>
+                <h4 class="price">$9<sup>.24</sup></h4>
+                <h6 class="descr">Marry Me, Stranger is a racy, spine chilling thriller with some mind-numbing revelations.</h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+            <div class="product">
+              <img alt="shoes1" src="../assets/images/rm.jpeg" height="300" width="200">
+              <div><h3>Ramayana Vs Maha </h3>
+                <h4 class="price">$10<sup>.24</sup></h4>
+                <h6 class="descr"> It is a popular belief that the Ramayana is idealistic, while </h6>
+              <br>
+              <a href="#"><h2>Add to cart</h2></a></div>
+            </div>
+      </div>
+      </section>
+
+        </section>
+        <h1 style="font-size: 30px; color: red;">And Many More to Come.....</h1>
+        <h1 style="font-size: 40px; color:black;">Page </h1>
+      </main>
+    </div>
+
+
+
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+
+
+</body>
+</html>

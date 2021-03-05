@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+
+        <% if(login.length!=0){%>
+          <% include ./partials/headerLogin.ejs %>
+          <% include ./partials/logout.ejs %>
+      <% }
+      else{%>
+        <% include ./partials/header.ejs %>
+        <% include ./partials/user-navigation.ejs %>
+      <% }%>
+       <% include partials/site-navigation.ejs %>
+
+    <div class="absolute">
+
+      <main>
+        <section>
+          <ul class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li></li>
+          </ul>
+
+          <article id="backgroundclip">
+
+            <h2 class="welcome">Give Your Book Details!!</h2>
+            <h4 style="color:red;"><%= alert %></h4>
+
+            <form class="forms" method="post" action="/UpdateBook" >
+
+            <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <span class="label-input100">Book Code</span>
+            <input class="input100" style="width: 30%;" type="text" name="bcode" placeholder="Please Enter Book Code" required>
+            <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <span class="label-input100">Book Name</span>
+            <input class="input100" style="width: 30%;" type="text" name="bname" placeholder="Please Enter Book Name" required>
+            <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <span class="label-input100">Category</span>
+            <input class="input100" style="width: 30%;" type="text" name="category" placeholder="Please Enter Book Category" required>
+            <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input alert-validate" data-validate="Message is required">
+            <span class="label-input100">Description</span>
+            <textarea class="input1000" style="width: 30%;" name="desc" placeholder="Please Enter Book Description"></textarea>
+            <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <span class="label-input100">Rating</span>
+            <input class="input100" style="width: 30%;" type="text" name="rating" placeholder="Please Enter Book Rating for 5" required>
+            <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <span class="label-input100">Image URL</span>
+            <input class="input100" style="width: 30%;" type="text" name="imageurl" placeholder="Please Enter Book URL Path" required>
+            <span class="focus-input100"></span>
+            </div>
+            <input type="submit"	 name="UpdateBook"/>
+
+          </form><br>
+
+          </article><br><br><br><br><br><br>
+
+        </section>
+      </main>
+
+    </div>
+
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+</body>
+</html>

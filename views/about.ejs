@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+
+        <% if(login.length!=0){%>
+          <% include ./partials/headerLogin.ejs %>
+          <% include ./partials/logout.ejs %>
+      <% }
+      else{%>
+        <% include ./partials/header.ejs %>
+        <% include ./partials/user-navigation.ejs %>
+      <% }%>
+       <% include partials/site-navigation.ejs %>
+
+    <div class="absolute">
+      <main>
+        <section>
+          <ul class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li><a href="/categories">Categories</a></li>
+                <li><a href="/store">Store</a></li>
+              <li><a href="/about">About</a></li>
+              <li></li>
+          </ul>
+          <br>
+
+          <article id="backgroundclip">
+
+            <h2 class="typography-headline-elevated" style="transform: translate(0px, 0px);">It’s as easy <br>as it sounds.</h2><br>
+
+            <h2 class="typography-headline-elevate" style="transform: translate(0px, 0px);">Buy 50 million books online. Book Rack is all about rare books.</h2>
+            <h2 class="typography-headline-elevate" style="transform: translate(0px, 0px);">Read your favorite books. Study them offline. So simple right!</h2>
+            <h2 class="typography-headline-elevate" style="transform: translate(0px, 0px);">Access your entire Books library. Just one stop for every problem.</h2>
+            <h2 class="typography-headline-elevate" style="transform: translate(0px, 0px);">Get exclusive and original content exclusive for all Book Rack Users.</h2>
+            <h2 class="typography-headline-elevate" style="transform: translate(0px, 0px);">Study across all of your platforms and reduce your load by visiting Book Rack.</h2>
+          </article>
+
+        </section>
+      </main>
+    </div>
+
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+</body>
+</html>

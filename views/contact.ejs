@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+
+        <% if(login.length!=0){%>
+          <% include ./partials/headerLogin.ejs %>
+          <% include ./partials/logout.ejs %>
+      <% }
+      else{%>
+        <% include ./partials/header.ejs %>
+        <% include ./partials/user-navigation.ejs %>
+      <% }%>
+       <% include partials/site-navigation.ejs %>
+
+    <div class="absolute">
+      <main>
+        <section>
+          <ul class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li><a href="/categories">Categories</a></li>
+                <li><a href="/store">Store</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li></li>
+          </ul>
+          <br>
+          <h2 style="color:red;"><%= alert %></h2>
+<form action="/send" method="post">
+  <span class="contact100-form-title">
+  Say Hello!
+  </span>
+  <div class="wrap-input100 validate-input" data-validate="Name is required">
+<span class="label-input100">Your Name:</span>
+<input class="input100" type="text" name="name" placeholder="Please Enter Your Name">
+<span class="focus-input100"></span>
+</div>
+<div class="wrap-input100 validate-input alert-validate" data-validate="Valid email is required: ex@abc.xyz">
+<span class="label-input100">Email:</span>
+<input class="input100" type="email" name="email" placeholder="Please Enter your Email">
+<span class="focus-input100"></span>
+</div>
+<div class="wrap-input100 validate-input alert-validate" data-validate="Message is required">
+<span class="label-input100">Message:</span>
+<textarea class="input1000" name="message" placeholder="Your message here..."></textarea>
+<span class="focus-input100"></span>
+</div>
+<button class="button typography-quote-custom variant-a-element" type="submit" ><span class="rollover">Contact Us</span></button>
+</form>
+
+
+        </section>
+      </main>
+    </div>
+
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+
+</body>
+</html>

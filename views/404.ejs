@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Rack</title>
+<link rel="icon" type="image/ico" href="/assets/images/logo.png">
+   <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+   <script type="text/javascript" src="/assets/javascript/modernizr.js"></script>
+   <script type="text/javascript" src="/assets/javascript/imagbg.js"></script>
+</head>
+<body>
+
+  <div class="first">
+	<div class="st st1 st2">
+
+
+        <% if(login.length!=0){%>
+          <% include ./partials/headerLogin.ejs %>
+          <% include ./partials/logout.ejs %>
+      <% }
+      else{%>
+        <% include ./partials/header.ejs %>
+        <% include ./partials/user-navigation.ejs %>
+      <% }%>
+       <% include partials/site-navigation.ejs %>
+
+    <div class="absolute">
+      <main>
+        <section>
+          <ul class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li></li>
+          </ul>
+          <br>
+
+          <section class="page_404">
+
+  		<div class="errors">
+        <h1>404</h1>
+          <h2>Sorry.. The Page you are looking is not found.</h2>
+  		<div class="four_zero_four_bg">
+  		</div>
+  		</div>
+
+  </section>
+
+        </section>
+      </main>
+    </div>
+
+<% include partials/footer.ejs %>
+</div>
+</div>
+
+
+</body>
+</html>

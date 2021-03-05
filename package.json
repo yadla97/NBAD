@@ -1,0 +1,26 @@
+{
+  "name": "nbad-2",
+  "version": "1.0.0",
+  "description": "Assignment 2",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "mongoose": "^5.4.20",
+    "nodemailer": "^5.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "modules",
+    "npm"
+  ],
+  "author": "Likhith Kumar Reddy Suram",
+  "license": "ISC"
+}
